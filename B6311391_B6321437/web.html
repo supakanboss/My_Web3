@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+      }
+
+      .grid-item {
+        font-family: "kanitlight";
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        background-color: #f0abdf;
+        color: white;
+        font-size: 25px;
+      }
+
+      table {
+        font-family: "kanitlight";
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+    <title>Street Basketball</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <!-- <script src="./node_modules/web3/dist/web3.min.js">
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">Welcome to Street Basketball</h1>
+      <h3 style="text-align: center">โปรดเลือกนักบาสที่ท่านต้องการ</h3>
+      <div class="grid-container">
+        <!--character 1-->
+        <div class="grid-item">
+          <label class="label1"> Aomine Daiki</label>
+          <img
+            src="img/10.jpeg"
+            width="250px"
+            alt="
+                Aomine Daiki"
+          />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Aomine Daiki',120000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00012 ETH</label>
+        </div>
+        <!--character 2-->
+        <div class="grid-item">
+          <label class="label1"> Murasakibara Atsushi</label>
+          <img src="img/02.jpeg" width="250px" alt="Murasakibara Atsushi" />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Murasakibara Atsushi',30000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00003 ETH</label>
+        </div>
+        <!--character 3-->
+        <div class="grid-item">
+          <label class="label1"> Hanamiya Makoto</label>
+          <img src="img/03.jpeg" width="250px" alt="Hanamiya Makoto" />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Hanamiya Makoto',40000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00004 ETH</label>
+        </div>
+        <!--character 4-->
+        <div class="grid-item">
+          <label class="label1"> Takao Kazunari</label>
+          <img src="img/04.jpeg" width="250px" alt="Takao Kazunari" />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Takao Kazunari',50000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00005 ETH</label>
+        </div>
+        <!--character 5-->
+        <div class="grid-item">
+          <label class="label1"> Kagami Taiga</label>
+          <img src="img/05.jpeg" width="250px" alt="Kagami Taiga" />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Kagami Taiga',60000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00006 ETH</label>
+        </div>
+        <!--character 6-->
+        <div class="grid-item">
+          <label class="label1"> Midorima Shintaro</label>
+          <img src="img/06.jpeg" width="250px" alt="Midorima Shintaro" />
+          <div class="button">
+            <button
+              class="btn"
+              id="button"
+              onclick="btnChoose('Midorima Shintaro',70000000000000)"
+            >
+              BUY
+            </button>
+          </div>
+          <label>0.00007 ETH</label>
+        </div>
+            <!--character 7-->
+        <div class="grid-item">
+            <label class="label1"> Kise Ryota</label>
+            <img src="img/07.jpeg" width="250px" alt="Kise Ryota" />
+            <div class="button">
+              <button
+                class="btn"
+                id="button"
+                onclick="btnChoose('Kise Ryota',80000000000000)"
+              >
+                BUY
+              </button>
+            </div>
+            <label>0.00008 ETH</label>
+          </div>
+          <!--character 8-->
+        <div class="grid-item">
+            <label class="label1">Kuroko Tetsuya</label>
+            <img src="img/08.jpeg" width="250px" alt="Kuroko Tetsuya" />
+            <div class="button">
+              <button
+                class="btn"
+                id="button"
+                onclick="btnChoose('Kuroko Tetsuya',90000000000000)"
+              >
+                BUY
+              </button>
+            </div>
+            <label>0.00009 ETH</label>
+          </div>
+          <!--character 9-->
+        <div class="grid-item">
+            <label class="label1">Akashi Seijuro</label>
+            <img src="img/09.jpeg" width="222px" alt="Akashi Seijuro" />
+            <div class="button">
+              <button
+                class="btn"
+                id="button"
+                onclick="btnChoose('Akashi Seijuro',100000000000000)"
+              >
+                BUY
+              </button>
+            </div>
+            <label>0.0001 ETH</label>
+          </div>
+
+      <table>
+        <tr>
+          <th>Time</th>
+          <th>Character</th>
+          <th>Owner</th>
+        </tr>
+        <tr>
+          <td id="time1"></td>
+          <td id="character1"></td>
+          <td id="owner1"></td>
+        </tr>
+        <tr>
+          <td id="time2"></td>
+          <td id="character2"></td>
+          <td id="owner2"></td>
+        </tr>
+        <tr>
+          <td id="time3"></td>
+          <td id="character3"></td>
+          <td id="owner3"></td>
+        </tr>
+        <tr>
+          <td id="time4"></td>
+          <td id="character4"></td>
+          <td id="owner4"></td>
+        </tr>
+        <tr>
+          <td id="time5"></td>
+          <td id="character5"></td>
+          <td id="owner5"></td>
+        </tr>
+        <tr>
+          <td id="time6"></td>
+          <td id="character6"></td>
+          <td id="owner6"></td>
+        </tr>
+        <tr>
+          <td id="time7"></td>
+          <td id="character7"></td>
+          <td id="owner7"></td>
+        </tr>
+        <tr>
+          <td id="time8"></td>
+          <td id="character8"></td>
+          <td id="owner8"></td>
+        </tr>
+        <tr>
+          <td id="time9"></td>
+          <td id="character9"></td>
+          <td id="owner9"></td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+      async function loadWeb3() {
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          window.ethereum.enable();
+        }
+      }
+
+      let currentAccount = null;
+      window.ethereum
+        .request({ method: "eth_accounts" })
+        .then(handleAccountsChanged)
+        .catch((err) => {
+          console.error(err);
+        });
+
+      window.ethereum.on("accountsChanged", handleAccountsChanged);
+
+      function handleAccountsChanged(accounts) {
+        if (accounts.length === 0) {
+          // MetaMask is locked or the user has not connected any accounts
+          console.log("Please connect to MetaMask.");
+        } else if (accounts[0] !== currentAccount) {
+          currentAccount = accounts[0];
+        }
+      }
+
+      let abi = [
+      
+      {
+          "anonymous": false,
+          "inputs": [
+              {
+                  "indexed": false,
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+              },
+              {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "character",
+                  "type": "string"
+              }
+          ],
+          "name": "Add",
+          "type": "event"
+      },
+      {
+          "inputs": [
+              {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+              }
+          ],
+          "name": "buy",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+      }
+      ];
+
+      async function loadContract() {
+        return await new window.web3.eth.Contract(
+          abi,
+          "0x88bd286698b2a376b37D7F5e01dd904C97f3aA11"
+        );
+      }
+
+      async function load() {
+        await loadWeb3();
+        window.contract = await loadContract();
+        updateStatus("Ready!");
+      }
+
+      function updateStatus(status) {
+        const statusEl = document.getElementById("status");
+        statusEl.innerHTML = status;
+        console.log(status);
+      }
+
+      var i = 0;
+
+      function btnChoose(p, v) {
+        console.log(currentAccount);
+        window.contract.methods
+          .buy(p)
+          .send({ from: currentAccount, value: v }, function (error, result) {
+            $("#result").html(result);
+          });
+        window.contract.once("Add", {}, function (error, event) {
+          if (!error) {
+            console.log(event);
+            var h = new Date().getHours();
+            var m = new Date().getMinutes();
+            $("#result").html(
+              "Name:" +
+                event.returnValues.character +
+                "<br/>time:" +
+                h +
+                ":"+
+                m +
+                "<br/>owner:" +
+                event.returnValues.owner
+            );
+            i++;
+            $("#time" + i).html(h + ":" + m);
+            $("#character" + i).html(event.returnValues.character);
+            $("#owner" + i).html(event.returnValues.owner);
+          }
+        });
+      }
+      load();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'kanitblack';
+    src: url('./fonts/kanit-black-webfont.woff2') format('woff2'),
+         url('./fonts/kanit-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  @font-face {
+    font-family: 'kanitlight';
+    src: url('./fonts/kanit-light-webfont.woff2') format('woff2'),
+         url('./fonts/kanit-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+body {
+    background-color:#F0F0F0;
+    padding: 2em;
+    font-family: 'Raleway','Source Sans Pro', 'Arial';
+}
+.container {
+    font-family: 'kanitlight';
+    width: 95%;
+    margin: 0 auto;
+}
+label {
+    font-family: 'kanitlight';
+    display:block;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+.label1 {
+    color:#4f4451;
+    font-family: 'kanitlight';
+    display:block;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+input {
+    padding:10px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+button {
+    font-family: 'kanitlight';
+    margin: 2em 0;
+    padding: 1em 4em;
+    display:block;
+    font-size: medium;
+}
+#result {
+    padding:1em;
+    background-color:#fff;
+    margin: 1em 0;
+}
